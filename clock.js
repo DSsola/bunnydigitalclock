@@ -1,0 +1,4 @@
+import{renderDigitalTime}from"./seven-segment.js";
+export function startClock(){const el=document.querySelector("#digitalTime"),ampm=document.querySelector("#ampm"),date=document.querySelector("#date");
+function update(){const n=new Date(),h=n.getHours(),h12=h%12||12,t=[String(h12).padStart(2,"0"),String(n.getMinutes()).padStart(2,"0"),String(n.getSeconds()).padStart(2,"0")].join(":");renderDigitalTime(el,t);ampm.textContent=h>=12?"PM":"AM";date.textContent=new Intl.DateTimeFormat("en-US",{weekday:"short",month:"short",day:"2-digit"}).format(n).toUpperCase()}
+function tick(){update();setTimeout(tick,1000-Date.now()%1000)}update();setTimeout(tick,1000-Date.now()%1000)}

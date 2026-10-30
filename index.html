@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#fffdf5"><title>Bunny Digital Clock</title>
+<link rel="stylesheet" href="./css/style.css"><script type="module" src="./js/main.js"></script>
+</head>
+<body>
+<div class="weather-scene" aria-hidden="true"><div class="sun-glow"></div><div class="cloud cloud-a"></div><div class="cloud cloud-b"></div><div id="particles"></div></div>
+<main class="page">
+<section class="shell" aria-label="Bunny digital clock">
+<div class="ears" aria-hidden="true">
+<svg class="ear left" viewBox="0 0 74 142"><path class="outline" d="M15 130C8 105 7 71 14 38 19 13 32 4 44 12 60 22 64 54 60 83 58 105 54 122 49 134 39 140 24 139 15 130Z"/><path class="inner" d="M24 119C18 93 18 62 24 39 28 23 35 19 41 25 51 35 53 59 50 82 48 101 44 116 40 126 34 129 28 125 24 119Z"/></svg>
+<svg class="ear right" viewBox="0 0 74 142"><path class="outline" d="M16 132C10 107 8 78 14 47 19 20 33 6 46 13 62 21 66 52 61 82 58 105 53 124 48 135 39 140 24 140 16 132Z"/><path class="inner" d="M25 120C19 96 19 68 25 46 29 28 37 20 43 27 53 37 54 60 51 83 48 103 44 118 39 127 34 129 29 125 25 120Z"/></svg>
+</div>
+<div class="card">
+<div class="top"><span id="ampm">AM</span><img id="weatherIcon" src="./assets/icons/unknown.svg" alt="" title="날씨 연결 전"></div>
+<div class="display"><div id="digitalTime" role="timer" aria-label="현재 시각"></div></div>
+<div class="bottom"><time id="date">MON, JAN 01</time><button id="weatherButton">날씨 연결</button></div>
+</div></section>
+<p id="hint">오늘의 날씨에 따라 배경 분위기가 살짝 달라져요.</p>
+</main></body></html>

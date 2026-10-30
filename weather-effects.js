@@ -1,0 +1,3 @@
+const holder=document.querySelector("#particles");let active="";
+function particle(kind,i){const p=document.createElement("span");p.className=`particle ${kind}`;p.style.setProperty("--x",`${(i*37.7+4)%100}%`);p.style.setProperty("--duration",`${kind==="rain"?1.8+(i%7)*.32:5+(i%8)*.7}s`);p.style.setProperty("--delay",`${-(i%13)*.63}s`);p.style.setProperty("--alpha",`${kind==="rain"?.12+(i%4)*.035:.35+(i%4)*.08}`);p.style.setProperty("--size",`${2+i%4}px`);return p}
+export function applyWeatherEffect(kind){if(kind===active)return;active=kind;document.body.dataset.weather=kind;holder.replaceChildren();const type=kind==="rain"?"rain":kind==="snow"?"snow":null;if(type){const count=type==="rain"?36:22;for(let i=0;i<count;i++)holder.append(particle(type,i))}}

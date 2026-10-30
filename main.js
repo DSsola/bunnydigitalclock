@@ -1,0 +1,1 @@
+import{startClock}from"./clock.js";import{startWeather}from"./weather.js";startClock();startWeather();
